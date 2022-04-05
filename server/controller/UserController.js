@@ -296,11 +296,9 @@ class UserController {
 
       await user.save();
 
-      // const url = `${req.protocol}://${req.get(
-      //   "host"
-      // )}/api/v1/password/reset/${token}`;
-
-      const url = `http://localhost:3000/password/reset/${token}`;
+      const url = `${req.protocol}://${req.get(
+        "host"
+      )}/api/v1/password/reset/${token}`;
 
       const message = `Hii ${user.name},\n\n Forgot your password? \n we recieved a request to reset password for your account.\n
       Click on the below link to reset password. \n\n\n ${url}`;
