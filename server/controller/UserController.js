@@ -8,11 +8,7 @@ class UserController {
   static async createUser(req, res) {
     try {
       const { name, email, password, avatar } = req.body;
-      const uploadPost = await cloudinary.v2.uploader.upload(avatar, {
-        folder: "userAvatars",
-        width: 150,
-        crop: "scale",
-      });
+      const uploadPost = await cloudinary.v2.uploader.upload(avatar);
       let user = await User.findOne({ email });
       if (user) {
         return res.status(400).json({

@@ -4,11 +4,7 @@ const cloudinary = require("cloudinary");
 class MemoryController {
   static async createMemory(req, res) {
     try {
-      const uploadPost = await cloudinary.v2.uploader.upload(req.body.image, {
-        folder: "userAvatars",
-        width: 150,
-        crop: "scale",
-      });
+      const uploadPost = await cloudinary.v2.uploader.upload(req.body.image);
       const newMemoryData = {
         title: req.body.title,
 

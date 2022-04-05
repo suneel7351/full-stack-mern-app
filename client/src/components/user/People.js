@@ -115,7 +115,7 @@ function People() {
                 </Typography>
               )}
             </div>
-            <div className="right flex-none md:flex-1 h-[60vh]">
+            <div className="right flex-none md:flex-1 b-16 md:mb-0">
               {user && (
                 <div className="right flex-1 overflow-y-auto h-[80.3vh] flex gap-6 flex-col pl-6">
                   <div className="flex flex-col items-center justify-center gap-2">
