@@ -3,7 +3,7 @@ const User = require("../models/user/User");
 const sendEmail = require("../middleware/SendEmail");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary");
-const ApiFeatures = require("../utils/Feature");
+
 class UserController {
   static async createUser(req, res) {
     try {
