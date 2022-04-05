@@ -1,0 +1,26 @@
+.header {
+  padding: 0.7rem 0;
+}
+.toolbar {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar .icon {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  opacity: 80%;
+  color: black;
+}
+.toolbar .icon:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .toolbar {
+    gap: 2rem;
+  }
+}
